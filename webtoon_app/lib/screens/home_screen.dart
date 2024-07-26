@@ -13,10 +13,10 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 3,
-        foregroundColor: const Color.fromARGB(255, 69, 15, 217),
+        backgroundColor: Colors.white,
+        foregroundColor: const Color.fromARGB(255, 15, 15, 217),
         title: const Text(
-          "오늘의 웹툰",
+          "Today's Webtoon",
           style: TextStyle(
             fontSize: 23,
             fontWeight: FontWeight.w600,
@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
 
   ListView makeList(AsyncSnapshot<List<WebtoonModel>> snapshot) {
     return ListView.separated(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
       scrollDirection: Axis.horizontal,
       itemCount: snapshot.data!.length,
       itemBuilder: (context, index) {
